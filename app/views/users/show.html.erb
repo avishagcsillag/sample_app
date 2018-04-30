@@ -1,11 +1,13 @@
 <% provide(:title, @user.name) %>
-<%= render 'layouts/weblogo' %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <div class="name_title">
+        	<%= @user.name %>
+    	</div>
+        <%=  image_tag("default-user.png", alt: "default logo", class: "profile_pic") %>
       </h1>
     </section>
   </aside>

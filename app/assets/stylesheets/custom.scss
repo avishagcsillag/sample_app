@@ -27,6 +27,17 @@ body {
   margin-right: auto;
 }
 
+.profile_pic{
+  display: block;
+  max-height: 40%;
+  max-width: 40%;
+  margin-left: auto;
+}
+
+.name_title{
+  font-size: 300%;
+}
+
 section {
   overflow: auto;
 }
