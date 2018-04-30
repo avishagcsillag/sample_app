@@ -15,6 +15,16 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  color: green;
+  /*background-repeat: no-repeat;*/
+  background-image: image-url('background.png');
+}
+
+.pic{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section {
