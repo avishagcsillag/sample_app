@@ -1,0 +1,10 @@
+
+
+<% if @feed_items.any? %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items %>
+ <% else %>
+ <h1>Problem: feed_items.any = false</h1>
+<% end %>

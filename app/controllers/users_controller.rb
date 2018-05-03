@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-############################################ private methods ################################################
+# ----------------------------------- private ----------------------------------- #
   private
 
     def user_params

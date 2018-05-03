@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class MicropostsControllerTest < ActionDispatch::IntegrationTest
-	
+
   def setup
+  	@user = users(:michael)
     @micropost = microposts(:orange)
   end
 
@@ -19,4 +20,17 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to login_url
   end
+
+  test "should render home if posting comment fails" do
+    get login_path
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
+    assert is_logged_in?
+    assert_no_difference 'Micropost.count' do
+      	post microposts_path, params: { micropost: { content: "" } }
+    end
+    assert_not flash.empty?
+    assert_redirected_to root_url
+  end
+
 end
