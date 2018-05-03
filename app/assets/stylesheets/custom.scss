@@ -34,6 +34,13 @@ body {
   margin-left: auto;
 }
 
+.post_pic{
+  display: block;
+  max-height: 30%;
+  max-width: 30%;
+  margin-left: auto;
+}
+
 .name_title{
   font-size: 300%;
   margin-left: 80px;
@@ -166,6 +173,7 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  display: block;
 }
 
 .gravatar_edit {
