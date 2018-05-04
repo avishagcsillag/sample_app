@@ -21,7 +21,6 @@ body {
 }
 
 .pic{
-
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -29,9 +28,11 @@ body {
 
 .profile_pic{
   display: block;
-  max-height: 40%;
-  max-width: 40%;
+  height: 130px;
+  width: 130px;
+  margin-right: auto;
   margin-left: auto;
+  margin-top: 10px;
 }
 
 .post_pic{
