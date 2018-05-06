@@ -41,7 +41,6 @@ class FollowingTest < ActionDispatch::IntegrationTest
   test "should unfollow a user the standard way" do
     @user.follow(@other)
     relationship = @user.active_relationships.find_by(followed_id: @other.id)
-    byebug
     assert_difference '@user.following.count', -1 do
       delete relationship_path(relationship)
     end

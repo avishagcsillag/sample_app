@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
 
     elsif user.nil?
       # Create an error message.
-      # byebug
       	flash.now[:danger] = 'User email does not exist' # Not quite right!
       	render 'new'
     else
